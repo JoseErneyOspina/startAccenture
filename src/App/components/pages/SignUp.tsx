@@ -51,7 +51,6 @@ const useStyles = makeStyles(() =>
                 minWidth: 290,
                 display: 'flex',
                 width: '100%',
-                backgroundColor: 'red',
                 margin: '0px 0px 8px 0px',
             },
         }

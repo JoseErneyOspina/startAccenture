@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import NavBar from '../organisms/NavBar';
 import { theme } from '../../../styles/theme';
-import { makeStyles, createStyles, ThemeProvider } from '@material-ui/core';
+import { makeStyles, createStyles, ThemeProvider, Grid } from '@material-ui/core';
 
 
 const useStyles = makeStyles(() =>
@@ -30,7 +30,9 @@ const MainLayout =  (props: { children: any }) => {
                     <NavBar />
                 </header>
                 <main className={classes.main}>
-                    {props.children}
+                    <Grid container>
+                        {props.children}
+                    </Grid>
                 </main>
             </ThemeProvider>
         </Fragment>
