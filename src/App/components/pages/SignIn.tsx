@@ -25,9 +25,6 @@ const useStyles = makeStyles(() =>
             display: 'flex',
             justifyContent: 'center',
         },
-        linkDecorations: {
-            textDecoration: 'none',
-        },
         signUp_Form__FieldSize: {
             width: '100%',
             margin: '8px',
@@ -37,6 +34,11 @@ const useStyles = makeStyles(() =>
                 width: '100%',
                 margin: '0px 0px 8px 0px',
             },
+        },
+        buttonAlign: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
         }
     })
 );
@@ -66,16 +68,18 @@ const SignIn = () => {
                         name="password"
                         className={classes.signUp_Form__FieldSize}
                     />
-                    <MainIconButton 
-                        name="Ingresar"
-                    />
+                    <Link to="/users" className={`${classes.buttonAlign}`}>
+                        <MainIconButton 
+                            name="Ingresar"
+                        />
+                    </Link>
                 </FormGroup>
             </Grid>
             <Grid container item className={classes.signIn_signUp}>
                 <p>¿No tienes una cuenta aún?</p>
             </Grid>
             <Grid container item className={classes.signIn_signUp}>
-                <Link to="/registrarse" className={classes.linkDecorations}>
+                <Link to="/registrarse">
                     <MainIconButton 
                         name="Registrate"
                     />
